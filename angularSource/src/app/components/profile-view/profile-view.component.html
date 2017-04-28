@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="viewContent" [hidden]="editMode">
+                    <button type="button" class="btn btn-primary" (click)="editMode=true;">Edit</button>
+                    <img src="{{user.picURL}}">
+                    <h3 style="text-align: center;">{{user.name}}<br>{{user.city}}</h3>
+                    <h3></h3>
+                    <table>
+                        <tr>
+                            <td>
+                                <h4>Resume: </h4></td>
+                            <td><a href="{{user.resume}}" target="_blank" class="btn btn-primary">Click to view resume</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>GitHub/Portfolio: </h4></td>
+                            <td><a href="{{user.github}}" target="_blank" class="btn btn-primary">Click to view GitHub</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Telephone: </h4></td>
+                            <td>
+                                <h4>{{user.telephone}}</h4></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="editContent" [hidden]="!editMode">
+                    <h1>Edit Profile</h1>
+                    <form (ngSubmit)="onSubmit()" #profileForm="ngForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" required="" [(ngModel)]="user.name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" required [(ngModel)]="user.city" name="city">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Telephone</label>
+                            <input type="text" class="form-control" id="telephone" required [(ngModel)]="user.telephone" name="telephone">
+                        </div>
+                        <div class="form-group">
+                            <label for="picUrl">Picture URL</label>
+                            <input type="text" class="form-control" id="picUrl" required [(ngModel)]="user.picURL" name="picURL">
+                        </div>
+                        <div class="form-group">
+                            <label for="resume">Resume</label>
+                            <input type="text" class="form-control" id="resume" required [(ngModel)]="user.resume" name="resume">
+                        </div>
+                        <div class="form-group">
+                            <label for="github">GitHub</label>
+                            <input type="text" class="form-control" id="github" required [(ngModel)]="user.github" name="github">
+                        </div>
+                        <button type="submit" class="btn btn-success" [disabled]="!profileForm.form.valid">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
