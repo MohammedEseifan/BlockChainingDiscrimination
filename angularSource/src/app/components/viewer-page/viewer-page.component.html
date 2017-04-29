@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-lg-12">
+		<div class="panel panel-default">
+  <div class="panel-body">
+     <table class="table">
+         <tr>
+                <td>
+                    <h4>Name</h4></td>
+                <td>
+                    <p> {{resume.name}}</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h4>Skills</h4></td>
+                <td>
+                    <div *ngFor="let skill of resume.skills">
+      		<p>{{skill}}</p>
+      </div>
+				</td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>School</h4></td>
+                <td><p>{{resume.school}}
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Grade</h4></td>
+                <td>
+                    <p>{{resume.grade}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Location</h4></td>
+                <td>
+                    <p> {{resume.location}}></p>
+                </td>
+            </tr>
+        </table>
+  </div>
+</div>
+
+      
+    </div>
+    
+</div>

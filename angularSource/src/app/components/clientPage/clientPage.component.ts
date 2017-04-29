@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NotiCard } from '../noti-card/NotiCard';
 import { User } from '../UserModel';
+import { UserService } from '../UserService';
 
 @Component({
   selector: 'client',
   templateUrl: './clientPage.component.html',
+  // providers:[UserService],
   styleUrls: ['./clientPage.component.css']
 })
 export class ClientComponent implements OnInit {
@@ -14,10 +16,17 @@ export class ClientComponent implements OnInit {
 	// new NotiCard("http://images.clipartpanda.com/weed-symbol-wallpaper-anny-s-weed-hi.png","Anubhav","Yo Dawg","It was just 420, you wanna blaze it? hit me up for a lit time brrrruhhhh."),
 	new NotiCard("https://yt3.ggpht.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAAAAAA/OixOH_h84Po/s900-c-k-no-mo-rj-c0xffffff/photo.jpg","MIT Person","More infos?","I liked your team I just wanted more infos if possible. Many thank!"),
 	];
-	user = new User("https://yt3.ggpht.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAAAAAA/OixOH_h84Po/s900-c-k-no-mo-rj-c0xffffff/photo.jpg", "Mohammed Eseifan","https://www.google.ca","https://www.github.com","(905) 897-2186","Toronto");
-  constructor() { }
+	users:User[];
 
-  ngOnInit() {
+	user = new User("https://yt3.ggpht.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAAAAAA/OixOH_h84Po/s900-c-k-no-mo-rj-c0xffffff/photo.jpg", "Mohammed Eseifan","https://www.google.ca","https://www.github.com","(905) 897-2186","Toronto");
+  //  constructor(private userService : UserService){}
+   constructor(){}
+
+  ngOnInit(){
+    // this.userService
+    //   .getAll()
+    //   .subscribe(p => this.users = p);
+		// 	this.user=this.users[0];
   }
 
 }

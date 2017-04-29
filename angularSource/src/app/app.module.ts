@@ -9,6 +9,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotiCardComponent } from './components/noti-card/noti-card.component';
 import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import { DataFieldComponent } from './components/data-field/data-field.component';
+import { DraggableDirective } from './components/data-field/DraggableDirective';
+import { DropTargetDirective } from './components/data-field/DropTargetDirective';
+import { DragService } from './components/data-field/DragService';
+import {UserService} from './components/UserService';
+import { ResumePageComponent } from './components/resume-page/resume-page.component';
+import { ViewerPageComponent } from './components/viewer-page/viewer-page.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +24,19 @@ import { ProfileEditComponent } from './components/profile-edit/profile-edit.com
     NavbarComponent,
     NotiCardComponent,
     ProfileViewComponent,
-    ProfileEditComponent
+    ProfileEditComponent,
+    DataFieldComponent,
+    DraggableDirective,
+    DropTargetDirective,
+    ResumePageComponent,
+    ViewerPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DragService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

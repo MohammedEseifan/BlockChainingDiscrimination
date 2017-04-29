@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col-lg-9">
+		<div class="panel panel-default">
+  <div class="panel-body">
+     <table class="table">
+         <tr>
+                <td>
+                    <h4>Name</h4></td>
+                <td>
+                    <datafield [textToDisplay]="resume.name"></datafield>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h4>Skills</h4></td>
+                <td>
+                    <div *ngFor="let skill of resume.skills">
+      		<datafield [textToDisplay]="skill"></datafield>
+      </div>
+				</td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>School</h4></td>
+                <td>
+                    <datafield [textToDisplay]="resume.school"></datafield>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Grade</h4></td>
+                <td>
+                    <datafield [textToDisplay]="resume.grade"></datafield>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Location</h4></td>
+                <td>
+                    <datafield [textToDisplay]="resume.location"></datafield>
+                </td>
+            </tr>
+        </table>
+  </div>
+</div>
+
+      
+    </div>
+    <div class="col-lg-3">
+        <table >
+            
+            <tr style="height: 400px">
+                <div class="likeDropTarget" myDropTarget (myDrop)="onLikeDrop($event)">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Likes</h3>
+                        </div>
+                        <div class="panel-body likeBody" style="height: 370px">
+                           
+                        </div>
+                    </div>
+                </div>
+            </tr>
+            <tr style="height: 400px">
+                <div class="dislikeDropTarget" myDropTarget (myDrop)="onDislikeDrop($event)">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Missing</h3>
+                        </div>
+                        <div class="panel-body dislikeBody" style="height: 370px">
+                           
+                        </div>
+                    </div>
+                </div>
+            </tr>
+        </table>
+    </div>
+</div>
