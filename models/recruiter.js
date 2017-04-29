@@ -4,7 +4,9 @@ var Schema       = mongoose.Schema;
 var RecruiterSchema   = new Schema({
     firstName: String,
     lastName: String,
-    candidatePipeline: [{ type: Schema.ObjectId, ref: 'User' }]
+    level: String,
+    traits:[{name:String,score:Number}],
+    timeAccuracy:[{time:String, accuracy:Number}]
 });
 
 module.exports = mongoose.model('Recruiter', RecruiterSchema);

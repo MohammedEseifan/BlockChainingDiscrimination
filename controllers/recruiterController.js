@@ -17,7 +17,10 @@ var Recruiter = require('../models/recruiter');
             
                recruiter.firstName = req.body.firstName;  
                recruiter.lastName = req.body.lastName; 
-               recruiter.candidatePipeline = req.body.candidatePipeline;   
+                recruiter.level = req.body.level;
+                recruiter.traits = req.body.traits;
+                recruiter.timeAccuracy = req.body.timeAccuracy;
+
 
 
 
@@ -56,9 +59,11 @@ var Recruiter = require('../models/recruiter');
            var recruiter = new Recruiter();      // create a new instance of the Bear model
        		
             
-              recruiter.firstName = req.body.firstName;  
+           recruiter.firstName = req.body.firstName;  
                recruiter.lastName = req.body.lastName; 
-               recruiter.candidatePipeline = req.body.candidatePipeline; 
+                recruiter.level = req.body.level;
+                recruiter.traits = req.body.traits;
+                recruiter.timeAccuracy = req.body.timeAccuracy; 
     
 
             // save the bear

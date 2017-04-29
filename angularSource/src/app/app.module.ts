@@ -9,6 +9,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotiCardComponent } from './components/noti-card/noti-card.component';
 import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 import { ProfileEditComponent } from './components/profile-edit/profile-edit.component';
+import { MainpageComponent } from './components/mainpage/mainpage.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ProfileEditComponent } from './components/profile-edit/profile-edit.com
     NavbarComponent,
     NotiCardComponent,
     ProfileViewComponent,
-    ProfileEditComponent
+    ProfileEditComponent,
+    MainpageComponent,
+  
   ],
   imports: [
     BrowserModule,

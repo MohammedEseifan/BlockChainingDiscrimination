@@ -17,8 +17,13 @@ var Resume = require('../models/resume');
             
                resume.skills = req.body.skills;  
                resume.grade = req.body.grade; 
-               resume.school = req.body.school;   
+               resume.school = req.body.school;
 
+               location = new Location();  
+               location.address = req.body.address;
+               location.town = req.body.town;
+               location.country = req.body.country;
+               resume.location = location;
 
 
 
@@ -56,9 +61,15 @@ var Resume = require('../models/resume');
            var resume = new Resume();      // create a new instance of the Bear model
        		
             
-               resume.skills = req.body.skills;  
+                resume.skills = req.body.skills;  
                resume.grade = req.body.grade; 
-               resume.school = req.body.school;   
+               resume.school = req.body.school;
+
+               location = new Location();  
+               location.address = req.body.address;
+               location.town = req.body.town;
+               location.country = req.body.country;
+               resume.location = location;  
             
     
 
