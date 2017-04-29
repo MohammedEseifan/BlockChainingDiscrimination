@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ClientComponent } from './components/client/client.component';
+import { ClientComponent } from './components/clientPage/clientPage.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotiCardComponent } from './components/noti-card/noti-card.component';
 import { ProfileViewComponent } from './components/profile-view/profile-view.component';
