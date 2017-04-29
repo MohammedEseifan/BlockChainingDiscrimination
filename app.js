@@ -61,6 +61,6 @@ var mongoose   = require('mongoose');
 var config  = require('./config/configuration');
 
 
-// mongoose.connect('mongodb://'+config.username+':'+config.password+'@'+config.dbName);
+ mongoose.connect('mongodb://'+config.username+':'+config.password+'@'+config.dbName);
 
 

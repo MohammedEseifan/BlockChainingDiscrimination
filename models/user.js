@@ -2,10 +2,13 @@ var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
 var UserSchema   = new Schema({
-    name: String,
-    points: Number,
-    active: Boolean,
-    results: [{ type: Schema.ObjectId, ref: 'Result' }]
+    firstName: String,
+    lastName: String,
+    stage: Number,
+    phoneNumber: String,
+    location: { type: Schema.ObjectId, ref: 'Location' },
+    resume:{ type: Schema.ObjectId, ref: 'Resume' },
+    git:{ type: Schema.ObjectId, ref: 'Git' }
 
 });
 

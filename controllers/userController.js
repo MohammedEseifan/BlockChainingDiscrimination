@@ -13,9 +13,29 @@ var User = require('../models/user');
     exports.createUser = function(req, res) {
         
         var user = new User();      // create a new instance of the Bear model
-       		user.name = req.body.name;
-     		user.points = req.body.points;
-            user.active = true;  // set the bears name (comes from the request)
+       		user.firstName = req.body.firstName;
+               user.lastName = req.body.lastName;
+               user.stage = req.body.stage;
+               user.phoneNumber = req.body.phoneNumber;
+               var location = Location();
+               location.address = req.body.address;
+               location.town = req.body.town;
+               location.country = req.body.country;
+               var resume = Resume();
+               resume.skills = req.body.skills;  
+               resume.grade = req.body.grade; 
+               resume.school = req.body.school;   
+               
+               var git = Git();
+               git.code = req.body.code;
+               user.git = git;
+               user.resume = resume;
+               user.location = location;
+
+
+
+
+     	
 
         // save the bear and check for errors
         user.save(function(err) {
@@ -46,9 +66,25 @@ var User = require('../models/user');
             if (err)
                 res.send(err);
 
-            user.name = req.body.name;
-     		user.points = req.body.points;
-            user.active = req.body.active;
+           var user = new User();      // create a new instance of the Bear model
+       		user.firstName = req.body.firstName;
+               user.lastName = req.body.lastName;
+               user.stage = req.body.stage;
+               user.phoneNumber = req.body.phoneNumber;
+               var location = Location();
+               location.address = req.body.address;
+               location.town = req.body.town;
+               location.country = req.body.country;
+               var resume = Resume();
+               resume.skills = req.body.skills;  
+               resume.grade = req.body.grade; 
+               resume.school = req.body.school;   
+               
+               var git = Git();
+               git.code = req.body.code;
+               user.git = git;
+               user.resume = resume;
+               user.location = location;
     
 
             // save the bear
@@ -71,16 +107,4 @@ var User = require('../models/user');
 
             res.json({ message: 'Successfully deleted' });
         });
-    };
-
-        exports.calculatePointsForUserByID = function(req, res) {
-         User.findById(req.params.user_id, function(err, user) {
-            if (err)
-                res.send(err);
-
-            for (user in User.results) {
-                text += person[x];
-            }
-            res.json(user);
-        })
     };
