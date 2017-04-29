@@ -67,7 +67,7 @@ var User = require('../models/user');
                 res.send(err);
 
            var user = new User();      // create a new instance of the Bear model
-       		user.firstName = req.body.firstName;
+       		   user.firstName = req.body.firstName;
                user.lastName = req.body.lastName;
                user.stage = req.body.stage;
                user.phoneNumber = req.body.phoneNumber;

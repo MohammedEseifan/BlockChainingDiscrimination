@@ -16,6 +16,7 @@ import { DragService } from './components/data-field/DragService';
 import {UserService} from './components/UserService';
 import { ResumePageComponent } from './components/resume-page/resume-page.component';
 import { ViewerPageComponent } from './components/viewer-page/viewer-page.component';
+import { MainpageComponent } from './components/mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { ViewerPageComponent } from './components/viewer-page/viewer-page.compon
     DraggableDirective,
     DropTargetDirective,
     ResumePageComponent,
-    ViewerPageComponent
+    ViewerPageComponent,
+    MainpageComponent
+  
   ],
   imports: [
     BrowserModule,
