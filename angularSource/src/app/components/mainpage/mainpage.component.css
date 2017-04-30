@@ -1,6 +1,10 @@
-img-button{
-width:20%;
-height:50%;
 
+.chart rect {
+  fill: steelblue;
+}
 
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
 }

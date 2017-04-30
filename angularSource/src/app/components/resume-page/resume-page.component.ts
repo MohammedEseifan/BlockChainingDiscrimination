@@ -7,7 +7,7 @@ import {Resume} from '../ResumeModel';
   styleUrls: ['./resume-page.component.css']
 })
 export class ResumePageComponent implements OnInit {
-  resume:Resume = new Resume(["Python","Java", "Knitting", "Talking"],"MIT",4.0,"USA", "John Smith");
+  resume:Resume = new Resume(["Python","Java", "Underwater Basketweaving", "Releasing tax returrns"],"MIT",4.12,"USA", "John Cena");
   constructor() { }
 
   ngOnInit() {

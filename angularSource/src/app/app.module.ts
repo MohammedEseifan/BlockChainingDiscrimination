@@ -17,6 +17,15 @@ import {UserService} from './components/UserService';
 import { ResumePageComponent } from './components/resume-page/resume-page.component';
 import { ViewerPageComponent } from './components/viewer-page/viewer-page.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const appRoutes: Routes = [
+  { path: '', component: MainpageComponent },
+  { path: 'resume', component: ViewerPageComponent },
+  { path: 'train', component: ResumePageComponent }
+];
+
 
 @NgModule({
   declarations: [
@@ -35,6 +44,7 @@ import { MainpageComponent } from './components/mainpage/mainpage.component';
   
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
     HttpModule
